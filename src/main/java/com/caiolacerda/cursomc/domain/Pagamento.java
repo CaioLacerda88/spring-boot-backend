@@ -14,7 +14,7 @@ import com.caiolacerda.cursomc.domain.enums.EstadoPagamento;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
-@Inheritance(strategy=InheritanceType.JOINED)
+@Inheritance(strategy = InheritanceType.JOINED)
 public abstract class Pagamento implements Serializable {
 	private static final long serialVersionUID = 1L;
 
@@ -24,7 +24,7 @@ public abstract class Pagamento implements Serializable {
 
 	@JsonIgnore
 	@OneToOne
-	@JoinColumn(name="pedido_id")
+	@JoinColumn(name = "pedido_id")
 	@MapsId
 	private Pedido pedido;
 
